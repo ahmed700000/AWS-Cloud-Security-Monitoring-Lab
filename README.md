@@ -219,6 +219,7 @@ Through this project, I gained hands-on experience with:
 - Designing cloud security monitoring use cases
 
 ---
+![Architecture Diagram](diagrams/architecture-diagram.png)
 
 ## Author
 
