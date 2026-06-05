@@ -9,7 +9,27 @@ The lab uses AWS CloudTrail, CloudWatch Logs, Metric Filters, CloudWatch Alarms,
 The objective is to simulate common cloud security monitoring use cases and generate automated alerts whenever suspicious or sensitive activities occur within the AWS environment.
 
 ---
+![Architecture Diagram](diagrams/architecture-diagram.png)
 
+## Detection Use Cases
+
+### 1. Secrets Manager Access Detection
+- Detects GetSecretValue API calls.
+- Generates CloudWatch metrics and SNS alerts.
+
+### 2. Console Login Without MFA
+- Detects successful AWS Console logins without MFA.
+- Generates CloudWatch alarms and email notifications.
+
+### 3. EC2 Instance Creation
+- Detects RunInstances events from CloudTrail.
+- Alerts when new EC2 instances are launched.
+
+### 4. Security Group Modification
+- Detects security group rule changes.
+- Alerts on potentially risky network exposure.
+
+- 
 ## Architecture
 
 ```text
@@ -219,7 +239,6 @@ Through this project, I gained hands-on experience with:
 - Designing cloud security monitoring use cases
 
 ---
-![Architecture Diagram](diagrams/architecture-diagram.png)
 
 ## Author
 
